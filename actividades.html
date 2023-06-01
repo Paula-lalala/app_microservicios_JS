@@ -14,43 +14,39 @@
             <table id= "EstudiantesTb">
                 <thead>
                     <tr>
-                        <th>CODIGO</th>
-                        <th>NOMBRES</th>
-                        <th>APELLIDOS</th>
-                        <th></th>
+                        <th>ID</th>
+                        <th>ACTIVIDADES</th>
+                        <th>NOTA</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Johan Mauricio</td>
-                        <td>Fonseca</td>
+                        <td>PAULA</td>
+                        <td>ORTEGON</td>
                         <td>
                             <button>Modificar</button>
                         </td>
                         <td>
                             <button>Eliminar</button>
                         </td>
-                        <td>
-                            <button>Notas</button>
-                        </td>
                     </tr>
                 </tbody>
             </table>
         </section>
         <section id = 'form'>
-            <form id = 'formularioEstudiante'>
+            <form id = 'formularioActividad'>
                 <label>
-                    <span>Codigo: </span>
-                    <input type="number" name="codigo" id = "codigo" required>
+                    <span>Id: </span>
+                    <input type="number" name="id" id = "id" required>
                 </label>
                 <label>
-                    <span>Nombres: </span>
-                    <input type="text" name="nombres" id = "nombres" required>
+                    <span>Actividad: </span>
+                    <input type="text" name="descripcion" id = "descripcion" required>
                 </label>
                 <label>
-                    <span>Apellidos: </span>
-                    <input type="text" name="apellidos"  id ="apellidos" required>
+                    <span>Nota: </span>
+                    <input type="text" name="nota"  id ="nota" required>
                 </label>
                 <section>
                     <button id = "Guardar" type="button">GUARDAR</button>
