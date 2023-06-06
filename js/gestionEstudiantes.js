@@ -29,7 +29,7 @@ $(document).ready(function(){
             html += '       <button onclick="eliminarEstudiante(' + Estudiante.codigo + ')" >ELIMINAR</button>';
             html += '   </td>';
             html += '   <td>';
-            html += '      <button onclick="redirigirActividades(' + Estudiante.codigo + ')" >NOTAS</button>'; 
+            html += '      <button onclick="redirigirActividades(' + Estudiante.codigo + ')" >NOTAS</button>';; 
             html += '   </td>';
             html += '<tr>';
         });
@@ -40,11 +40,10 @@ $(document).ready(function(){
     })
  }
 
-    redirigirActividades = function(Estudiantecodigo){
-        codigo = Estudiantecodigo;
-        var url = "actividades.html?codigo=" + encodeURIComponent(codigo);
-        window.location.href = url;
-    }
+    redirigirActividades = function(Estudiantecodigo) {
+        localStorage.setItem('codigoEstudiante', Estudiantecodigo);
+        window.location.href = 'actividades.html';
+    };
 
     mostrarEstudiante();
 
@@ -126,4 +125,6 @@ $(document).ready(function(){
         })
     }
 
+
     })
+
