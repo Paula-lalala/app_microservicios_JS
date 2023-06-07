@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <title>Gestion de estudiantes</title>
     <link rel="stylesheet" href="CSS/app.css">
+    <link rel="stylesheet" href="CSS/modal.css">
 </head>
 <body>
     <header>
         <h1>GESTION DE ESTUDIANTES</h1>
     </header>
     <main>
-        <section id = 'table'>
-            <table id= "EstudiantesTb">
+        <section id="form">
+            <button id="btnMostrarFormulario" class="registrar">Registrar Estudiante</button>
+        </section>
+        <section id="table">
+            <table id="EstudiantesTb">
                 <thead>
                     <tr>
                         <th>CODIGO</th>
@@ -23,48 +27,36 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>PAULA</td>
-                        <td>ORTEGON</td>
-                        <td>
-                            <button id="modBtn">Modificar</button>
-                        </td>
-                        <td>
-                            <button>Eliminar</button>
-                        </td>
-                        <td>
-                            <button>Notas</button>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </section>
-        <section id = 'form'>
-            <form id = 'formularioEstudiante'>
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="formularioEstudiante">
+                <br>
+                <h3 id="tituloM">FORMULARIO</h3>
+                <br>
                 <label>
                     <span>Codigo: </span>
-                    <input type="number" name="codigo" id = "codigo" required>
+                    <input type="number" name="codigo" id="codigo" required>
                 </label>
                 <label>
                     <span>Nombres: </span>
-                    <input type="text" name="nombres" id = "nombres" required>
+                    <input type="text" name="nombres" id="nombres" required>
                 </label>
                 <label>
                     <span>Apellidos: </span>
-                    <input type="text" name="apellidos"  id ="apellidos" required>
+                    <input type="text" name="apellidos" id="apellidos" required>
                 </label>
                 <section>
-                    <button id = "Guardar" type="button">GUARDAR</button>
+                    <button id="Guardar" type="button">GUARDAR</button>
                 </section>
             </form>
-        </section>
-    </main>
+        </div>
+    </div>
 
-        <footer>
-            <p>Programacion avanzada</p>
-            <p>@2023</p>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" type ="text/javascript"></script>
-        <script src="js/gestionEstudiantes.js"></script>
-</body>
-</html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" type="text/javascript"></script>
+    <script src="js/gestionEstudiantes.js"></script>

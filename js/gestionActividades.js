@@ -49,9 +49,8 @@ $(document).ready(function(){
                 document.getElementById('promedio').className = 'paso';
                 promedio = 0;
             } else {
-                document.getElementById('promedio').innerText = 'Lo sentimos, estás perdiendo la materia con: ';
-                document.getElementById('Nprom').innerText = promedio;
-                document.getElementById('Nprom').className = 'perdio';
+                document.getElementById('promedio').innerText = 'Lo sentimos, estás perdiendo la materia con: '+ promedio;
+                document.getElementById('promedio').className = 'perdio';
                 promedio = 0;
             }
         } else {
@@ -59,6 +58,7 @@ $(document).ready(function(){
             document.getElementById('promedio').innerText = 'No hay notas';
             document.getElementById('promedio').classList.remove('perdio');
             document.getElementById('promedio').classList.remove('paso');
+            document.getElementById('promedio').className = 'promNN';
         }
         tbody.innerHTML = html;
         console.log(dataJson);
@@ -108,11 +108,9 @@ $(document).ready(function(){
   
     }   
 
-    document.getElementById('descripcion')
-        .setAttribute('value', '')
-    document.getElementById('nota')
-        .setAttribute('value', '')
-    document.getElementById('formularioActividad').reset()
+    document.getElementById('descripcion').setAttribute('value', '');
+    document.getElementById('nota').setAttribute('value', '');
+    document.getElementById('formularioActividad').reset();
     })
 
     modificarActividad = function(Actividadid){
@@ -125,6 +123,7 @@ $(document).ready(function(){
             const actividades= dataJson.data;
             document.getElementById('descripcion').setAttribute('value', actividades.descripcion)
             document.getElementById('nota').setAttribute('value', actividades.nota)
+            document.getElementById('modal').style.display = 'block';
             })
         modificar = 1
     }    
@@ -142,5 +141,33 @@ $(document).ready(function(){
             mostrarActividad()
         })
     }
+
+        $("#btnMostrarFormulario").click(function () {
+            mostrarModal();
+        });
+    
+        function mostrarModal() {
+            $("#modal").css("display", "block");
+        }
+    
+        function cerrarModal() {
+            $("#modal").css("display", "none");
+        }
+    
+        $(".close").click(function () {
+            cerrarModal();
+        });
+    
+        $(window).click(function (event) {
+            if (event.target == $("#modal")[0]) {
+                cerrarModal();
+            }
+        });
+    
+        // Restablecer el formulario y cerrar el modal al hacer clic en el botón "Guardar"
+        $("#Guardar").click(function () {
+            $("#formularioActividad")[0].reset();
+            cerrarModal();
+        });
 
     })

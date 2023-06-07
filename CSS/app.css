@@ -1,177 +1,114 @@
-/*General*/
+ /* General */
 
 h1 {
-    text-align: center;
-    margin-top: 40px;
-    color: #ffffff;
-    font-size: 60px;
-    font-family:'Gill Sans MT', sans-serif;
-    text-decoration-line:overline;
-  }
-  
-  h3 {
-    font-family: 'Gill Sans MT', sans-serif;
-    background-color: #ffae4b52;
-    color: #ff7700;
-    padding: 10px;
-    width: auto;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-size: 20px;
-    
-  }
-  
-  header {
-    background-color: #ffae4b;
-    color: #fff;
-    padding: 20px;
-    text-transform: uppercase;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  body{
-    background-color: #fffec7;
-  }
-  
-  /*Tablas*/
-  table {
-    width: 100%;
-    background-color: #fff;
-    border-collapse: collapse;
-    border-radius: 4px;
-    border: 2px solid #ffae4b;
-  }
-    
-  table tr {
-    text-align: center;
-  }
-  
-  table th, table td {
-    font-family: 'Gill Sans MT', sans-serif;
-    width: auto;
-    padding: 20px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  
-  table th {
-    background-color: #ffae4b;
-    color: #fff;
-    font-size: 20px;
-  }
-  
-  
-  tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  tbody button {
-    font-family: 'Gill Sans MT', sans-serif;
-    display: inline-block;
-    padding: 5px 10px;
-    width: 70%;
-    background-color: #ff922b;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  tbody button:hover {
-    background-color: #FFC682;
-  }
-      
-  .texto{
-    font-size: 20px;
-    font-weight: 500;
-  }
-  
-  
-  /*Mensajes y botones (En los views)*/
-  div {
-    max-width: 30%;
-    background-color: #f2f2f2;
-    margin: 20px auto;
-    box-shadow: 2px 8px 16px rgba(3, 3, 3, 0.553);
-    padding: 20px; 
-  }
-  
-  #promedio{
-    font-family: 'Gill Sans MT', sans-serif;
-    color: #ff761b;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px 20px;
-  }
+  text-align: center;
+  margin-top: 40px;
+  color: #ffffff;
+  font-size: 60px;
+  font-family: 'Gill Sans MT', sans-serif;
+  text-decoration-line: overline;
+}
 
-  
-  #notas{
-    font-family: 'Gill Sans MT', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    display: block;
-    background-color: #ffa56593;
-    color:#ff6a00;
-    text-decoration: none;
-  }
-  
-  .registrar{
-    font-family: 'Gill Sans MT', sans-serif;
-    display: block;
-    width: 25%;
-    padding: 12px;
-    margin: 20px auto;
-    text-align: center;
-    background-color: #ff922b;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 25px;
-    text-decoration: none;
-  }
-  
-  .registrar:hover {
-    background-color: #fdb673;
-  }
+h3 {
+  font-family: 'Gill Sans MT', sans-serif;
+  background-color: #ff4bab52;
+  color: #ff4b75;
+  padding: 10px;
+  width: auto;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
 
-  
-  
-  #menProm{
-    font-family: 'Gill Sans MT', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    display: block;
-  }
-  
-  .perdio{
-    font-family: 'Gill Sans MT', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    padding: 10px 20px;
-    align-items: center;
-    background-color: rgba(255, 32, 32, 0.434);
-    color: red;
-  }
-  
-  .paso{
-    font-family: 'Gill Sans MT', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    display: block;
-    background-color: rgba(56, 255, 56, 0.642);
-    color: green;
-  }
+header {
+  background-color: #ff4b75;
+  color: #fff;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: #ffd6fe;
+}
+
+/*Tablas*/
+ table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffbbe06f;
+  border-radius: 4px;
+  border: 2px solid #ff4b75;
+}
+
+table tr {
+  text-align: center;
+}
+
+table th,
+table td {
+  font-family: 'Gill Sans MT', sans-serif;
+  width: auto;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+table th {
+  background-color: #ff4b75;
+  color: #fff;
+  font-size: 20px;
+}
+
+tbody button {
+  font-family: 'Gill Sans MT', sans-serif;
+  display: inline-block;
+  padding: 5px 10px;
+  width: 70%;
+  background-color: #ff4b75;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+tbody button:hover {
+  background-color: #fda0ce;
+}
+
+.texto {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/*Mensajes y botones (En los views)*/
+
+
+.registrar {
+  font-family: 'Gill Sans MT', sans-serif;
+  display: block;
+  width: 25%;
+  padding: 12px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #ff4b75;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.registrar:hover {
+  background-color: #ff9ac6;
+} 
+
