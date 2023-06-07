@@ -7,7 +7,10 @@ let modificar = -1;
 
 $(document).ready(function(){
     var codigoEstudiante = localStorage.getItem('codigoEstudiante');
-    console.log(codigoEstudiante);
+    var nombres = localStorage.getItem('nombreEstudiante');
+    
+    document.getElementById('codigo').innerText = codigoEstudiante;
+    document.getElementById('nombres').innerText = nombres;
     mostrarActividad = function(){
          
     $.ajax({ 
@@ -46,8 +49,9 @@ $(document).ready(function(){
                 document.getElementById('promedio').className = 'paso';
                 promedio = 0;
             } else {
-                document.getElementById('promedio').innerText = 'Lo sentimos, estás perdiendo la materia con: ' + promedio;
-                document.getElementById('promedio').className = 'perdio';
+                document.getElementById('promedio').innerText = 'Lo sentimos, estás perdiendo la materia con: ';
+                document.getElementById('Nprom').innerText = promedio;
+                document.getElementById('Nprom').className = 'perdio';
                 promedio = 0;
             }
         } else {

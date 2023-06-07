@@ -4,6 +4,24 @@ let mostrarEstudiante = () => {};
 let redirigirActividades = () => {}; 
 let datos = () => {};  
 
+$(document).ready(function() {
+  // Obtener el botón para mostrar/ocultar el formulario
+  var toggleFormBtn = $('#toggleFormBtn');
+  var modBtn = $('#modBtn');
+
+  // Obtener el formulario
+  var formularioEstudiante = $('#formularioEstudiante');
+
+  // Mostrar/ocultar el formulario al hacer clic en el botón
+  toggleFormBtn.on('click', function() {
+    formularioEstudiante.toggle();
+  });
+
+  modBtn.on('click', function() {
+    formularioEstudiante.toggle();
+  });
+});
+
 $(document).ready(function(){ 
     let codigoEstudianteModificar = 1; 
     let modificar = -1; 
@@ -29,7 +47,7 @@ $(document).ready(function(){
             html += '       <button onclick="eliminarEstudiante(' + Estudiante.codigo + ')" >ELIMINAR</button>';
             html += '   </td>';
             html += '   <td>';
-            html += '      <button onclick="redirigirActividades(' + Estudiante.codigo + ')" >NOTAS</button>';; 
+           html += '      <button onclick="redirigirActividades(' + Estudiante.codigo + ', \'' + Estudiante.nombres + '\', \'' + Estudiante.apellidos + '\')">NOTAS</button>';
             html += '   </td>';
             html += '<tr>';
         });
@@ -40,8 +58,10 @@ $(document).ready(function(){
     })
  }
 
-    redirigirActividades = function(Estudiantecodigo) {
-        localStorage.setItem('codigoEstudiante', Estudiantecodigo);
+ redirigirActividades = function(Estudiantecodigo, nombres, apellidos, fullName) {
+    var fullName = nombres + " " + apellidos;  
+    localStorage.setItem('codigoEstudiante', Estudiantecodigo);  
+    localStorage.setItem('nombreEstudiante', fullName);
         window.location.href = 'actividades.html';
     };
 
